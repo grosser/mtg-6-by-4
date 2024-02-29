@@ -12,7 +12,7 @@ xoffset = 125
 yoffset = 291
 out_ppi = ppi * 1.03 # when printed cards are slightly too big even though our math looks good
 
-sh "rm -rf **/*.png"
+sh "rm -rf {pages,cards,print}/*.png"
 sh "mkdir -p pages cards print"
 sh "convert -density #{ppi} deck.pdf pages/%d.png"
 
