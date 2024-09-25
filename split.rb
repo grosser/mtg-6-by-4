@@ -14,7 +14,7 @@ out_ppi = ppi * 1.03 # when printed cards are slightly too big even though our m
 
 sh "rm -rf {pages,cards,print}/*.png"
 sh "mkdir -p pages cards print"
-sh "convert -density #{ppi} deck.pdf pages/%d.png"
+sh "magick convert -density #{ppi} deck.pdf pages/%d.png"
 
 Dir["pages/*.png"].each_with_index do |png, pi|
   3.times do |ri|
